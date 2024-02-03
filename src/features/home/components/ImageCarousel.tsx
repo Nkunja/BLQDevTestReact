@@ -30,14 +30,14 @@ export default function MainBanner() {
       }}
       modules={[Navigation]}
       className="mySwiper"
-      style={{ width: "100%", height:"250px" }} // Set the width of the Swiper container
+      style={{ width: "100%", height:"250px" }} 
     >
       {mainBanner.map((banner, index) => (
         <SwiperSlide
           key={banner.mainBannerId}
           style={{
-            width: index === 1 ? "80%" : "0%", // Show only the middle slide with 80% width
-            margin: "auto", // Center the slide horizontally
+            width: index === 1 ? "80%" : "0%", 
+            margin: "auto", 
           }}
         >
           <img
@@ -52,62 +52,3 @@ export default function MainBanner() {
     </Swiper>
   );
 }
-
-
-
-
-
-
-
-// import { useEffect } from "react"
-// // Import Swiper React components
-// import { Swiper, SwiperSlide } from "swiper/react"
-
-// // Import Swiper styles
-// import "swiper/css"
-// import "swiper/css/free-mode"
-// import "swiper/css/pagination"
-// import "swiper/css/navigation"
-
-// // import required modules
-// import { Autoplay, FreeMode, Pagination } from "swiper/modules"
-// import { useAppDispatch, useAppSelector } from "../../../app/hooks"
-// import { getMainBannerAsync } from "../homeAsync"
-
-// export default function MainBanner() {
-//   const dispatch = useAppDispatch()
-//   const { mainBanner } = useAppSelector(state => state.home)
-//   useEffect(() => {
-//     dispatch(getMainBannerAsync())
-//   }, [dispatch])
-//   return (
-//     <Swiper
-//       slidesPerView={3}
-//       spaceBetween={30}
-//       loop={true}
-//       freeMode={true}
-//       centerInsufficientSlides
-//       pagination={{
-//         clickable: true,
-//       }}
-//       autoplay={{
-//         delay: 2500,
-//         disableOnInteraction: false,
-//       }}
-//       modules={[Autoplay, FreeMode, Pagination]}
-//       className="h-[323px] mySwiper "
-//     >
-//       {mainBanner.map(banner => {
-//         return (
-//           <SwiperSlide key={banner.mainBannerId}>
-//             <img
-//               src={banner.pcImageUrl}
-//               alt={banner.title}
-//               className="h-full object-cover"
-//             />
-//           </SwiperSlide>
-//         )
-//       })}
-//     </Swiper>
-//   )
-// }
