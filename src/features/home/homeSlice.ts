@@ -40,7 +40,7 @@ export const homeSlice = createSlice({
   reducers: {},
   extraReducers: builder => {
     builder
-      // MainBanner
+      // MainHomeBanner
       .addCase(getMainBannerAsync.pending, state => {
         state.bannerStatus = "loading"
       })

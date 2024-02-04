@@ -1,4 +1,5 @@
 import { useEffect, useMemo } from "react"
+// import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../app/hooks"
 import MainBanner from "./components/ImageCarousel"
 import MainShortcut from "./components/MainShortcut"
@@ -29,3 +30,5 @@ export const HomeScreen = () => {
     </>
   )
 }
+
+
