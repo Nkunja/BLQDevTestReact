@@ -6,7 +6,7 @@ const options = [5, 10, 20, 30]
 
 export const Quotes = () => {
   const [numberOfQuotes, setNumberOfQuotes] = useState(10)
-  // Using a query hook automatically fetches data and returns query values
+  // Using a query hook to automatically fetch data and return query values
   const { data, isError, isLoading, isSuccess } =
     useGetQuotesQuery(numberOfQuotes)
 
